@@ -15,7 +15,8 @@ Although this guide was written for macOS, most commands should work in other op
 ## Requirements
 
 ```sh
-$ brew install gpg keybase
+$ brew install gpg
+$ brew cask install keybase
 ```
 
 You should already have an account with Keybase and be signed in locally using `$ keybase login`. In case you need to set up a new device first, follow the instructions provided by the keybase command during login.
@@ -64,8 +65,10 @@ $ keybase pgp export -q CB86A866E870EE00 | pbcopy # copy public key to clipboard
 ```
 
 ## Import key to GPG on another host
+On target host:
 
 ```sh
+$ keybase login <enter creds...>
 $ keybase pgp export
 # ▶ WARNING Found several matches:
 # user: Patrick Stadler <patrick.stadler@gmail.com>
